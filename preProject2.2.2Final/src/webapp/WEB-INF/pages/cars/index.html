@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<div th:each="car : ${cars}">-->
+<!--  <a th:href="@{/cars/{id}(id = ${car.getId()})}" th:text="${car.getType()}"></a>-->
+<!--</div>-->
+
+<table>
+    <tr>
+        <th>Type</th>
+        <th>Series</th>
+        <th>id</th>
+    </tr>
+    <tr>
+    <tr th:each="car : ${count}">
+        <td th:utext="${car.getType()}"></td>
+        <td th:utext="${car.getSeries()}"></td>
+        <td th:utext="${car.getId()}"></td>
+    </tr>
+    </tr>
+</table>
+
+</body>
+</html>
