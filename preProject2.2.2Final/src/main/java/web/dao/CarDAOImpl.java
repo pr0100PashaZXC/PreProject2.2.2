@@ -25,6 +25,8 @@ public class CarDAOImpl implements CarDAO{
 
 
     public List<Car> getCars(int count) {
-        return cars.stream().limit(count).collect(Collectors.toList());
+        if((count > 0 ) && (count < cars.size())) {
+            return cars.stream().limit(count).collect(Collectors.toList());
+        } else return cars;
     }
 }
